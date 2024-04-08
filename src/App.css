@@ -1,0 +1,165 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.App {
+  text-align: center;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.sidebar {
+  width: calc(25vh); /* Adjusting width for the border */
+  background-color: #000000; /* Change background color to black */
+  color: white; /* Change font color to white */
+  height: 100%; /* Extend to bottom of page */
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  border-right: 1vh solid #434343; /* Ad 1vh wide gray border on the right side */
+}
+
+.sidebar-title {
+  font-size: 6vh;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+}
+
+.sidebar-menu {
+  list-style: none;
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu-item {
+  font-size: 4vh; /* Increased font size */
+  margin-bottom: 1vh;
+  cursor: pointer;
+  transition: font-size 0.3s, font-weight 0.3s;
+}
+
+.sidebar-menu-item:hover {
+  font-size: 5vh; /* Increase font size on hover */
+  font-weight: bold;
+}
+
+.sidebar-menu-item.active {
+  font-weight: bold;
+  font-size: 5vh;
+
+}
+.content {
+  padding: 2vh;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5vh;
+}
+
+.animation-title {
+  font-size: 5vh;
+  font-weight: bold;
+  margin-bottom: 1vh;
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+}
+
+.animation-container {
+  width: 35vh; /* Set animation width */
+  height: 35vh; /* Set animation height */
+  display: flex;
+  align-items: center; /* Center animation vertically */
+  justify-content: center; /* Center animation horizontally */
+}
+
+
+.input-button-container input[type="number"] {
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  width: 7vh; /* Adjust the width as needed */
+  padding: 1vh; /* Add padding to maintain input box size */
+  font-size: 3vh; /* Set the font size */
+  border: 0.4vh solid #000000; /* Add border to make outlines visible */
+  border-radius: 1vh; /* Add border radius for rounded corners */
+}
+.input-button-container input[type="number"]:focus {
+  outline: none; /* Remove default focus outline */
+  border: 0.6vh solid #000000;; /* Change border color on focus */
+}
+
+button {
+  margin-left: 0;
+  padding: 1.5vh;
+}
+
+.counter {
+  font-size: 7vh; /* Increase size of the counter */
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  margin-top: 1.2vh;
+  margin-bottom: 1.2vh
+}
+.weekly-total,
+.monthly-total {
+  font-size: 3vh; /* Set font size for totals */
+  margin-top: 0.5vh; /* Add margin space */
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+}
+.graphs {
+  background-color: rgb(255, 255, 255);
+  color: white;
+}
+.graphs-container {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden; /* Prevent scrolling */
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  font-size: 2.5vh;
+  margin-top:  1%;
+}
+
+
+/* Add this CSS to style the text inside the graphs page */
+.graphs-container h1,
+.graphs-container p {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 0%; /* Align the top of the container to the middle of the viewport */
+  left: 50%; /* Align the left side of the container to the middle of the viewport */
+  transform: translate(-50%, -50%); /* Move the container up and left by half of its width and height */
+}
+.input-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  width: 8vh; /* Same width as the input field */
+  height: 6vh; /* Same height as the input field */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5vh;
+}
+
+.submit-icon {
+  font-size: 6vh; /* Adjust the font size as needed */
+}
+.submit-icon:hover {
+  font-size: 7vh; /* Increase font size on hover */
+  font-weight: bold;
+}
+.sidebar button {
+  margin-top: auto; /* Push the button to the bottom */
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  font-size: 4vh
+}
+
+.sidebar button:hover {
+  color:rgb(205, 94, 94)
+}

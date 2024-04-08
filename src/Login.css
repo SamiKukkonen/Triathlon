@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.login-body {
+  background-color: #000000; /* Set body background color to black */
+  overflow: hidden; /* Disable scrolling for the entire page */
+}
+
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-top: 20vh; /* Add margin-top in viewport units (vh) */
+}
+
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure video is behind the content */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh; /* Add margin-top in viewport units (vh) */
+}
+
+.content label {
+  color: #fff; /* Set form label color to white */
+}
+
+.content input::placeholder {
+  color: black; /* Set placeholder color to black */
+}
+
+.content input {
+  font-size: 3vh;
+  width: 32vh; /* Adjust width as needed */
+  padding: 1.5vh;
+  margin-bottom: 1vh; /* Add margin bottom to input fields */
+  border: none; /* Remove borders */
+  border-radius: 1.5vh; /* Add border radius */
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+}
+
+
+.content button {
+  width: 35vh; /* Adjust width as needed */
+  padding: 2vh 3vh;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.5vh; /* Add border radius */
+  margin-top: 1.5vh; /* Add margin-top to center the button */
+  font-size: 3vh;
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+}
+
+
+.content button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.login-title {
+  color: #fff; /* Set login title color to white */
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  font-size: 5vh;
+}
+
+.error-message {
+  color: white; /* Set error message color to white */
+  text-align: center; /* Center the text horizontally */
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  font-size: 3vh;
+}
+

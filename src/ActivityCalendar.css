@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Define animation keyframes */
+@keyframes fillSquareAnimation {
+    0% { fill: transparent; } /* Start with transparent color */
+    100% { fill: var(--fill-color); } /* End color */
+}
+
+.activity-calendar {
+    font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+}
+
+/* Apply animation to all squares */
+.color-empty,
+.color-swimming,
+.color-running,
+.color-cycling,
+.color-multiple {
+    animation: fillSquareAnimation 5s ease forwards; /* Animation duration, timing function, and fill mode */
+}
+
+/* Apply animation delay to empty squares */
+.color-empty {
+    animation-delay: calc(var(--animation-delay) * 1s); /* Delay based on animation order */
+}
+
+/* Apply animation delay to filled squares */
+.color-swimming,
+.color-running,
+.color-cycling,
+.color-multiple {
+    animation-delay: calc(var(--animation-delay) * calc(var(--square-index) + 1) * 5s); /* Delay based on animation order and square index */
+}
+
+/* Define color transitions */
+.color-empty,
+.color-swimming,
+.color-running,
+.color-cycling,
+.color-multiple {
+    transition: fill 10s ease; /* Slower transition for color changes */
+}
+
+/* Define colors */
+.color-empty { --fill-color: #d4cfcf; } /* Color for empty squares (slightly gray) */
+.color-swimming { --fill-color: #70c7f8; } /* Color for swimming activities */
+.color-running { --fill-color: #4caf50; } /* Color for running activities */
+.color-cycling { --fill-color: #ff9800; } /* Color for cycling activities */
+.color-multiple { --fill-color: #b700ff; } /* Color for days with multiple activities */
