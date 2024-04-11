@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Lottie from 'react-lottie';
 import CountUp from 'react-countup';
-import { SlArrowRightCircle } from "react-icons/sl"; // Importing the arrow icon
+import { SlArrowRightCircle } from "react-icons/sl"; 
 import animationData1 from "./assets/Animation1.json";
 import animationData2 from "./assets/Animation2.json";
 import animationData3 from "./assets/Animation3.json";
@@ -11,7 +11,7 @@ import Sidebar from "react-sidebar";
 import axios from 'axios';
 import Graphs from './graphs';
 import ActivityChart from './ActivityChart';
-import Login from './Login'; // Import the Login component
+import Login from './Login'; 
 const baseUrl = '/activities'
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
       sidebarOpen: true,
       items: [],
       currentView: 'Home',
-      animationIndex: null, // Added state variable to track the index of the submit button triggering the animation
+      animationIndex: null, //  state variable to track the index of the submit button triggering the animation
       isLoggedIn: false // State variable to track login status
     };
     this.sidebarMenuItems = [
@@ -117,17 +117,16 @@ class App extends Component {
           newInputs[index] = "";
           this.setState({ inputs: newInputs, animationIndex: index }); // Set the animation index
   
-          // Adjust the duration of the animation here
           setTimeout(() => {
             this.setState({ animationIndex: null }); // Reset the animation index after the desired duration
-          }, 6000); // Change 3000 to the desired duration in milliseconds
+          }, 6000); 
         })
         .catch(error => {
           console.error('Error creating activity:', error);
         });
     }
   }
-  
+
 
   getActivityType(index) {
     switch (index) {
@@ -251,7 +250,7 @@ class App extends Component {
                 rendererSettings: {
                   preserveAspectRatio: 'xMidYMid slice'
                 },
-                renderer: 'svg', // Choose the renderer (svg or canvas)
+                renderer: 'svg', 
               }}
               height={100}
               width={100}

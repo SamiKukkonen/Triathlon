@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Login.css'; // Import CSS file
-import backgroundVideo from './assets/TRIATHLON.mp4'; // Import MP4 file
+import './Login.css'; 
+import backgroundVideo from './assets/TRIATHLON.mp4'; 
 
 const Login = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');

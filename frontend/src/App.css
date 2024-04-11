@@ -123,8 +123,6 @@ button {
   margin-top:  1%;
 }
 
-
-/* Add this CSS to style the text inside the graphs page */
 .graphs-container h1,
 .graphs-container p {
   color: rgb(0, 0, 0);

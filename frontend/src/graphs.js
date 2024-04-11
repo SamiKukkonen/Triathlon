@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import * as d3 from 'd3'; // Import D3.js library
+import * as d3 from 'd3'; 
 
 const Graphs = ({ activities }) => {
   const graphRef = useRef(null);
@@ -85,6 +85,7 @@ const Graphs = ({ activities }) => {
 
 
     // Append bars
+    // eslint-disable-next-line
     const bars = g.selectAll(".bar")
       .data(barData)
       .enter().append("rect")
