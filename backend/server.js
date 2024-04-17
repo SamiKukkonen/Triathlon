@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs'); // Import bcryptjs for password hashing
 const axios = require('axios');
 const cors = require('cors'); // Import CORS middleware
 require('dotenv').config();
+const fetch = require('node-fetch');
 
 // Create Express app
 const app = express();
@@ -130,6 +131,36 @@ app.post('/check-login', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
+// app.post('/api/auth/google', (req, res) => {
+//  const { code } = req.body;
+//  const client_id = process.env.GOOGLE_CLIENT_ID; // Make sure this is set in your environment
+//  const client_secret = process.env.GOOGLE_CLIENT_SECRET; // Make sure this is set in your environment
+//  const redirect_uri = 'http://localhost:3000/api/auth/google'; // This should match your Authorized Redirect URI
+//  const grant_type = 'authorization_code';
+
+//  fetch('https://oauth2.googleapis.com/token', {
+//    method: 'POST',
+//    headers: {
+//      'Content-Type': 'application/x-www-form-urlencoded',
+//    },
+//    body: new URLSearchParams({
+//      code,
+//      client_id,
+//      client_secret,
+//      redirect_uri,
+//      grant_type,
+//    }),
+//  })
+//  .then(response => response.json())
+//  .then(tokens => {
+//    res.json(tokens);
+//  })
+//  .catch(error => {
+//    console.error('Token exchange error:', error);
+//    res.status(500).json({ error: 'Internal Server Error' });
+//  });
+// });
 
 // Start the server
 app.listen(PORT, () => {

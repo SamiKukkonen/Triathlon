@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { googleLogout} from '@react-oauth/google';
 import './App.css';
 import Lottie from 'react-lottie';
 import CountUp from 'react-countup';
@@ -11,7 +12,7 @@ import Sidebar from "react-sidebar";
 import axios from 'axios';
 import Graphs from './graphs';
 import ActivityChart from './ActivityChart';
-import Login from './Login'; 
+import Login from './Login';
 const baseUrl = '/activities'
 
 class App extends Component {
@@ -56,6 +57,7 @@ class App extends Component {
     this.setState({ isLoggedIn: false });
     // Remove login status from localStorage
     localStorage.removeItem('isLoggedIn');
+    googleLogout();
   };
 
   fetchItems() {
@@ -189,7 +191,7 @@ class App extends Component {
       default:
         title = "";
     }
-
+    
     return (
       <div className="column" key={index}>
         <div className="animation-title">{title}</div>
@@ -302,13 +304,19 @@ class App extends Component {
       </div>
     );
   }
+  
 
   render() {
     const { currentView, isLoggedIn } = this.state;
 
     if (!isLoggedIn) {
-      return <Login onLoginSuccess={this.handleLoginSuccess} />;
+      return (
+        <div>
+          <Login onLoginSuccess={this.handleLoginSuccess} />
+        </div>
+      );
     }
+    
 
     return (
       <div className="App">

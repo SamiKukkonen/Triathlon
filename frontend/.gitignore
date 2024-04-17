@@ -6,6 +6,7 @@
 .pnp.js
 .env
 /post.rest
+/src/index.js
 
 # testing
 /coverage

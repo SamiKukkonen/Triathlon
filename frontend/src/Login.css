@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  margin-top: 20vh; /* Add margin-top in viewport units (vh) */
+  margin-top: 10vh; /* Add margin-top in viewport units (vh) */
 }
 
 
@@ -83,5 +83,11 @@
   text-align: center; /* Center the text horizontally */
   font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
   font-size: 3vh;
+}
+.google-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
 }
 
